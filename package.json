@@ -1,0 +1,17 @@
+{
+  "name": "syncstorages",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@googleapis/drive": "^8.7.0",
+    "cfonts": "^3.2.0",
+    "terminal-bigtext-generator": "^1.0.1"
+  }
+}
