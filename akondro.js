@@ -1,13 +1,11 @@
 const { argv } = require('node:process');
 const { updateFiles } = require('./actions/pushAction');
-const { displayBigText } = require('./display')
-let command,
-	params,
-	remoteConfig,
-	localeConfig,
-	actualdate;
+const { addAction } = require('./actions/addActions');
+const { pullAction } = require('./actions/pullActions');
+const { displayBigText } = require('./display');
 
-actualdate = Date.now();
+let command,
+	params;
 
 if (undefined == argv[2])
 {
@@ -20,8 +18,6 @@ argv.forEach((val, index) => {
 
 	if (val == 'add') {
 		command = 'add'
-		if (undefined != argv[3])
-			params = argv[3]
 	}
 
 	if (val == 'push') {
@@ -35,6 +31,9 @@ argv.forEach((val, index) => {
 	if (val == 'pull') {
 		command = 'pull';
 	}
+
+	if (undefined != argv[3])
+		params = argv[3]
 });
 
 if (undefined == command)
@@ -49,4 +48,18 @@ if ('help' == command) {
 if ('add' == command && undefined == params)
 {
 	displayBigText({cmd: 'add', message: 'no-file'})
+}
+
+switch(command) {
+	case 'push':
+		updateFiles()
+		break;
+	case 'add':
+		addAction(params)
+		break;
+	case 'pull':
+		pullAction()
+		break;
+	default:
+		break;
 }
