@@ -1,5 +1,5 @@
 {
-  "name": "syncstorages",
+  "name": "akondro",
   "version": "1.0.0",
   "description": "",
   "main": "akondro.js",
@@ -8,9 +8,9 @@
     "pull": "node ./akondro.js pull",
     "add": "node ./akondro.js add"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "keywords": ["sync", "file-sync", "node", "gcloud", "google-drive"],
+  "author": "Pascal TOVOHERY<tovoherypascal@gmail.com>",
+  "license": "MIT",
   "dependencies": {
     "@googleapis/drive": "^8.7.0",
     "cfonts": "^3.2.0",
