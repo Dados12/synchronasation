@@ -2,9 +2,11 @@
   "name": "syncstorages",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "akondro.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "push": "node ./akondro.js push",
+    "pull": "node ./akondro.js pull",
+    "add": "node ./akondro.js add"
   },
   "keywords": [],
   "author": "",
@@ -12,6 +14,7 @@
   "dependencies": {
     "@googleapis/drive": "^8.7.0",
     "cfonts": "^3.2.0",
+    "googleapis": "^134.0.0",
     "terminal-bigtext-generator": "^1.0.1"
   }
 }
