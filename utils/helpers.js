@@ -1,13 +1,19 @@
+const env = process.env;
 
-const hashFiles = (filePath) => {
+const verifyEnvFile = () => {
+    Object.keys(env).forEach(elmnt => {
 
+        console.log(elmnt)
+    })
 }
 
-const verifyFileExist = (filePath) => {
-    
+// Sort filepath
+const sortFilePath = (filepath) => {
+    const sortedArray = filepath.split('').map(s => s.charCodeAt(0))
+    return sortedArray.join('');
 }
 
 module.exports = {
-    hashFiles,
-    verifyFileExist,
+    verifyEnvFile,
+    sortFilePath
 }
